@@ -236,7 +236,7 @@ footer a{color:#fff}
       <div class="form-card">
         <h2>Get Your Free Fall Cleanup Estimate</h2>
         <p class="lede">Takes 30 seconds. We'll reach out to get you a price.</p>
-        <form name="fall-cleanup-estimate" class="leadForm" netlify data-netlify="true" netlify-honeypot="bot-field">
+        <form name="fall-cleanup-estimate" class="leadForm" netlify data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
           <input type="hidden" name="form-name" value="fall-cleanup-estimate" />
           <input type="hidden" name="gclid" class="gclid" />
           <p class="hp"><label>Leave blank <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
@@ -310,7 +310,7 @@ footer a{color:#fff}
       <div class="form-card">
         <h2>Get Your Free Fall Cleanup Estimate</h2>
         <p class="lede">Takes 30 seconds. We'll reach out to get you a price.</p>
-        <form name="fall-cleanup-estimate" class="leadForm" netlify data-netlify="true" netlify-honeypot="bot-field">
+        <form name="fall-cleanup-estimate" class="leadForm" netlify data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
           <input type="hidden" name="form-name" value="fall-cleanup-estimate" />
           <input type="hidden" name="gclid" class="gclid" />
           <p class="hp"><label>Leave blank <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
@@ -357,7 +357,7 @@ footer a{color:#fff}
   // Analytics events (dataLayer / gtag if present)
   function ev(name){window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:name});}
   document.addEventListener('click',function(e){var t=e.target.closest('[data-event]');if(t)ev(t.dataset.event);});
-  document.querySelectorAll('.leadForm').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();ev('fall_cleanup_lead_submit');var c=f.closest('.form-card');c.innerHTML='<h2>Got It — Your Estimate Request Is In</h2><p class="lede">Preview only: on the live site this sends the lead and goes to the thank-you page.</p>';c.scrollIntoView({block:'center'});});});
+  document.querySelectorAll('.leadForm').forEach(function(f){f.addEventListener('submit',function(){ev('fall_cleanup_lead_submit');});});
 
   document.getElementById('yr').textContent=new Date().getFullYear();
 })();
