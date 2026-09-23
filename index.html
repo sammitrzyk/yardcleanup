@@ -1,0 +1,366 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Alejandro's Fall Cleanup</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" />
+<style>
+:root{
+  --forest:#173f2b; --green:#3f8a3a; --green-dk:#326f2e;
+  --amber:#d9851b; --amber-dk:#bd6f10;
+  --cream:#f6f1e7; --ink:#17201a; --muted:#5b645d; --line:#e2ddd1; --white:#fff;
+  --r:14px; --shadow:0 14px 40px rgba(23,63,43,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:#fff;font-family:Manrope,Arial,sans-serif;font-size:17px;line-height:1.6;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{margin:0 0 .45em;line-height:1.1;font-weight:800;letter-spacing:-.015em}
+h2{font-size:clamp(28px,4.2vw,42px);text-align:center}
+p{margin:0 0 1em}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.sec{padding:76px 0}
+@media (max-width:640px){.sec{padding:56px 0}}
+.center{text-align:center}
+.lede{color:var(--muted);font-size:18px;max-width:620px;margin:0 auto 34px;text-align:center}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--amber);color:#fff;font:800 18px/1.2 Manrope,Arial,sans-serif;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;border:0;border-radius:var(--r);padding:19px 32px;cursor:pointer;box-shadow:0 8px 22px rgba(217,133,27,.32);transition:background .15s,transform .1s}
+.btn:hover{background:var(--amber-dk)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--forest);outline-offset:3px}
+.microcopy{font-size:14px;color:var(--muted);margin-top:12px;font-weight:600}
+
+/* Header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.hdr img{height:60px;width:auto}
+@media (max-width:480px){.hdr .wrap{height:72px}.hdr img{height:50px}}
+.hdr a.tel{display:inline-flex;align-items:center;gap:8px;color:var(--forest);font-weight:800;text-decoration:none;font-size:17px}
+.hdr a.tel svg{width:18px;height:18px}
+@media (max-width:480px){.hdr a.tel{background:var(--forest);color:#fff;padding:9px 13px;border-radius:999px;font-size:15px;gap:6px;white-space:nowrap}.hdr a.tel svg{width:16px;height:16px}.hdr img{height:44px}}
+
+/* Hero */
+.hero{background:var(--cream)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:56px;padding-bottom:56px}
+.hero h1{font-size:clamp(34px,5.2vw,56px);color:var(--forest)}
+.hero .sub{font-size:clamp(18px,2vw,21px);color:#394239;max-width:520px;margin-bottom:28px}
+.hero .rating{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:22px;font-weight:700;font-size:15px;color:var(--ink)}
+@media (max-width:480px){.hero .dot{display:none}.hero .rating{gap:4px 8px}}
+.proof{margin-top:18px;display:flex;flex-direction:column;gap:2px}
+.proof .stars.big{font-size:24px;letter-spacing:3px;line-height:1.2}
+.proof-txt{font-weight:800;font-size:16px;color:var(--ink)}
+@media (max-width:860px){.proof{align-items:center;text-align:center}}
+.stars{color:#f2a900;letter-spacing:2px;font-size:17px}
+.hero-img{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3.3}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:28px;padding-top:32px;padding-bottom:36px}
+  .hero .btn{width:100%}
+  .hero-img{aspect-ratio:16/10}
+}
+
+/* Trust strip */
+.trust{background:var(--forest);color:#fff}
+.trust ul{list-style:none;margin:0;padding:14px 0;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 28px;font-weight:700;font-size:15px}
+.trust li{display:flex;align-items:center;gap:8px}
+.trust svg{width:17px;height:17px;flex:none;color:#9fd18f}
+
+/* Before / After */
+.ba{position:relative;max-width:620px;margin:0 auto;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:248/350;user-select:none;touch-action:pan-y;background:#ddd}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .after{clip-path:inset(0 0 0 var(--pos,50%))}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:4px;margin-left:-2px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.35)}
+.ba .knob{position:absolute;top:50%;left:50%;width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 4px 16px rgba(0,0,0,.3);color:var(--forest)}
+.ba .knob svg{width:26px;height:26px}
+.ba .tag{position:absolute;top:16px;padding:6px 12px;border-radius:8px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.ba .tag.b{left:16px;background:rgba(0,0,0,.6)}
+.ba .tag.a{right:16px;background:var(--green)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba-note{text-align:center;color:var(--muted);font-size:18px;max-width:600px;margin:26px auto 0}
+
+/* Included */
+.inc{background:var(--cream)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:860px){.grid3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.grid3{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.card .ic{width:48px;height:48px;border-radius:12px;background:#eaf3e6;color:var(--green);display:grid;place-items:center;margin-bottom:14px}
+.card .ic svg{width:26px;height:26px}
+.card h3{font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:var(--forest);margin-bottom:6px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+@media (max-width:520px){.inc .card{display:grid;grid-template-columns:48px 1fr;gap:0 16px;padding:18px}.inc .card .ic{grid-row:span 2;margin:0}}
+.cta-mid{text-align:center;margin-top:48px}
+.cta-mid h3{font-size:clamp(22px,3vw,28px);color:var(--forest);margin-bottom:18px}
+
+/* Weekend */
+.wk{background:var(--forest);color:#fff}
+.wk .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.wk h2{text-align:left;color:#fff}
+.wk p.body{color:rgba(255,255,255,.84);font-size:18px}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.benefit{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:16px}
+.benefit strong{display:block;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#f6c27a;margin-bottom:4px}
+.benefit span{font-size:15px;color:rgba(255,255,255,.85)}
+.wk-img{border-radius:20px;overflow:hidden;aspect-ratio:4/3}
+.wk-img img{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){.wk .wrap{grid-template-columns:1fr;gap:30px}.benefits{grid-template-columns:1fr}}
+
+/* Reviews */
+.revs{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:880px;margin:0 auto}
+@media (max-width:860px){.revs{grid-template-columns:1fr}}
+.rev{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column}
+.rev blockquote{margin:12px 0 18px;font-size:17px;flex:1}
+.rev .who{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px}
+.rev .who img{width:20px;height:20px}
+.rev .who small{display:block;font-weight:600;color:var(--muted);font-size:13px}
+.g-score{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:700;margin:-14px 0 34px;color:var(--muted)}
+.g-score img{width:22px;height:22px}
+
+/* Steps */
+.steps-sec{background:var(--cream)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+@media (max-width:860px){.steps{grid-template-columns:1fr}}
+.step{padding:26px;border-radius:18px;background:#fff;border:1px solid var(--line)}
+.step .n{font-size:40px;font-weight:800;color:var(--amber);line-height:1;margin-bottom:12px}
+.step h3{font-size:20px;color:var(--forest)}
+.step p{margin:0;color:var(--muted);font-size:16px}
+
+/* Area */
+.towns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:760px;margin:0 auto}
+.towns span{background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:999px;font-weight:700;font-size:15px;color:var(--forest)}
+.area-note{text-align:center;color:var(--muted);margin-top:20px}
+
+/* Form */
+.final{background:var(--forest)}
+.form-card{max-width:620px;margin:0 auto;background:#fff;border-radius:22px;padding:38px 34px;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+@media (max-width:520px){.form-card{padding:28px 20px}}
+.form-card h2{color:var(--forest);font-size:clamp(26px,3.6vw,34px)}
+.form-card .lede{margin-bottom:24px;font-size:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:800;font-size:15px;margin-bottom:6px}
+.field label em{font-style:normal;font-weight:600;color:var(--muted)}
+.field input,.field textarea{width:100%;font:500 17px Manrope,Arial,sans-serif;padding:15px 16px;border:1.5px solid #cfd6cd;border-radius:12px;background:#fbfbf9;color:var(--ink)}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(63,138,58,.18);background:#fff}
+.form-card .btn{width:100%;margin-top:6px}
+.form-card .microcopy{text-align:center}
+.photo-tip{display:flex;gap:12px;align-items:flex-start;background:#fdf4e6;border:1px solid #f1d7ad;border-radius:12px;padding:12px 14px;margin-top:18px;font-size:15px;color:#6a4a17}
+.photo-tip svg{width:22px;height:22px;flex:none;color:var(--amber);margin-top:1px}
+.hp{position:absolute;left:-9999px}
+
+/* Footer */
+footer{background:#0f2a1c;color:rgba(255,255,255,.7);font-size:14px;padding:26px 0 110px;text-align:center}
+footer a{color:#fff}
+@media (min-width:861px){footer{padding-bottom:26px}}
+
+/* Sticky mobile CTA */
+.sticky{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;display:none;transform:translateY(160%);transition:transform .25s ease}
+.sticky.show{transform:none}
+.sticky .btn{width:100%;padding:17px}
+@media (max-width:860px){.sticky{display:block}}
+</style>
+
+<header class="hdr">
+  <div class="wrap">
+    <img src="img/logo.png" alt="Alejandro's Landscaping" width="167" height="60" />
+    <a class="tel" href="tel:+17177366538" data-event="call_click">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+      <span class="num">(717) 736-6538</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <!-- 1. HERO -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <h1>Fall Yard Cleanup in New Cumberland, PA</h1>
+        <p class="sub">Leaves piling up? We'll clean up your lawn, beds and seasonal debris and get your property ready for winter.</p>
+        <a class="btn" href="#estimate" data-event="cta_hero">Get My Free Estimate</a>
+        <div class="proof"><span class="stars big" aria-label="5 stars">★★★★★</span><span class="proof-txt">4.9 Google Rating · 30+ Reviews</span></div>
+      </div>
+      <div class="hero-img">
+        <img src="img/hero.jpg" alt="Alejandro's crew clearing fall leaves from a driveway" width="1280" height="814" fetchpriority="high" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TRUST STRIP -->
+  <div class="trust">
+    <ul class="wrap">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Free Estimates</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Fully Insured</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Local Family-Owned</li>
+    </ul>
+  </div>
+
+  <!-- 3. BEFORE / AFTER -->
+  <section class="sec">
+    <div class="wrap">
+      <h2>See The Difference A Full Cleanup Makes</h2>
+      <p class="lede" style="margin-bottom:28px">Drag the slider.</p>
+      <div class="ba" id="ba" style="--pos:50%">
+        <img src="img/before.jpg" alt="Front yard covered in fallen leaves before cleanup" loading="lazy" width="744" height="1050" />
+        <img class="after" src="img/after.jpg" alt="Same front yard after fall cleanup with leaves cleared" loading="lazy" width="744" height="1050" />
+        <span class="tag b">Before</span><span class="tag a">After</span>
+        <div class="handle"><div class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></div></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Before and after comparison slider" />
+      </div>
+      <p class="ba-note">We clear the leaves, beds and debris so you're left with a clean property—not piles at the curb.</p>
+    </div>
+  </section>
+
+  <!-- 7. REVIEWS -->
+  <section class="sec" style="background:var(--cream)">
+    <div class="wrap">
+      <h2>Trusted By Homeowners Across Central PA</h2>
+      <div class="g-score"><img src="img/google-g.svg" alt="" /> 4.9 <span class="stars" aria-label="5 stars">★★★★★</span> on Google</div>
+      <div class="revs">
+        <figure class="rev" style="margin:0">
+          <span class="stars" aria-label="5 stars">★★★★★</span>
+          <blockquote>“I have them come out each spring to clean out the garden beds and top off the mulch, and they're consistently reliable. They always arrive on time, work efficiently, and the yard looks great when they're finished. I especially appreciate that they make sure everything is completely cleaned up before they leave.”</blockquote>
+          <figcaption class="who"><img src="img/google-g.svg" alt="" /><div>Patrick Keating<small>Google review</small></div></figcaption>
+        </figure>
+        <figure class="rev" style="margin:0">
+          <span class="stars" aria-label="5 stars">★★★★★</span>
+          <blockquote>“Clear, upfront quotes, on-time arrivals, and proactive communication. They back their hard work with high-quality, professional craftsmanship and meticulous cleanup.”</blockquote>
+          <figcaption class="who"><img src="img/google-g.svg" alt="" /><div>Christina<small>Google review</small></div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM (after reviews) -->
+  <section class="sec final" id="estimate">
+    <div class="wrap">
+      <div class="form-card">
+        <h2>Get Your Free Fall Cleanup Estimate</h2>
+        <p class="lede">Takes 30 seconds. We'll reach out to get you a price.</p>
+        <form name="fall-cleanup-estimate" class="leadForm">
+          <input type="hidden" name="form-name" value="fall-cleanup-estimate" />
+          <input type="hidden" name="gclid" class="gclid" />
+          <p class="hp"><label>Leave blank <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required /></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required /></div>
+          <div class="field"><label for="f-det">Tell us about your yard <em>(optional)</em></label><textarea id="f-det" name="details" placeholder="e.g. front & back lawn leaves, 3 flower beds, some fallen branches"></textarea></div>
+          <button class="btn" type="submit">Get My Free Estimate</button>
+          <div class="microcopy">Free estimate • No obligation • Local Central PA crew</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. WHAT'S INCLUDED -->
+  <section class="sec inc" style="background:#fff">
+    <div class="wrap">
+      <h2>Everything Your Yard Needs This Fall</h2>
+      <p class="lede">One visit. One crew. Your whole property reset for winter.</p>
+      <div class="grid3">
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.2-6.1 2.4-.5 4.8-2 5.8-3.9"/></svg></div><h3>Leaf Removal</h3><p>Leaves cleared from lawns and landscape areas.</p></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10M10 20c5.5-2.5.8-6.4 3-10M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8zM14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></div><h3>Bed Cleanup</h3><p>Leaves, weeds and seasonal debris removed.</p></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 14 9M14 9l4-5M14 9l6 1M9 14l-1-5M6 17l5 1"/></svg></div><h3>Branch &amp; Debris Removal</h3><p>Fallen sticks, branches and yard debris cleared.</p></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></div><h3>Shrub &amp; Plant Cutbacks</h3><p>Seasonal trimming and cutbacks where needed.</p></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2M9.6 4.6A2 2 0 1 1 11 8H2M12.6 19.4A2 2 0 1 0 14 16H2"/></svg></div><h3>Final Blow-Off</h3><p>Walkways, patios and hard surfaces left clean.</p></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.7a1 1 0 0 0-.2-.6l-3.5-4.3A1 1 0 0 0 17.5 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></div><h3>Haul Away</h3><p>Everything we remove leaves with us.</p></div>
+      </div>
+
+      <!-- 5. MID CTA -->
+      <div class="cta-mid">
+        <h3>Ready To Get Your Yard Cleaned Up?</h3>
+        <a class="btn" href="#estimate" data-event="cta_mid">Get My Free Estimate</a>
+        <div class="microcopy">Free estimate • No obligation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. GET YOUR WEEKEND BACK -->
+  <section class="sec wk">
+    <div class="wrap">
+      <div>
+        <h2>Get Your Weekend Back.</h2>
+        <p class="body">Fall cleanup can mean hours of raking, blowing, bagging and hauling—only to do it again when more leaves come down.</p>
+        <p class="body">Let our crew handle the heavy cleanup so you can enjoy your weekend and head into winter with the property taken care of.</p>
+        <div class="benefits">
+          <div class="benefit"><strong>No Weekend of Raking</strong><span>We handle the work.</span></div>
+          <div class="benefit"><strong>No Piles to Haul</strong><span>Debris leaves with us.</span></div>
+          <div class="benefit"><strong>Ready for Winter</strong><span>A clean seasonal reset.</span></div>
+        </div>
+      </div>
+      <div class="wk-img">
+        <img src="img/crew.jpg" alt="Alejandro's Landscaping trailer and equipment on a job" loading="lazy" width="900" height="480" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 9. SERVICE AREA -->
+  <section class="sec" style="background:var(--cream)">
+    <div class="wrap">
+      <h2>Local Fall Cleanup Across The West Shore</h2>
+      <p class="lede" style="margin-bottom:26px">Based in New Cumberland. Serving homes within about 15 miles.</p>
+      <div class="towns">
+        <span>New Cumberland</span><span>Camp Hill</span><span>Lemoyne</span><span>Mechanicsburg</span><span>Harrisburg</span><span>Enola</span><span>Etters</span><span>+ nearby areas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FINAL FORM -->
+  <section class="sec final" id="estimate-2">
+    <div class="wrap">
+      <div class="form-card">
+        <h2>Get Your Free Fall Cleanup Estimate</h2>
+        <p class="lede">Takes 30 seconds. We'll reach out to get you a price.</p>
+        <form name="fall-cleanup-estimate" class="leadForm">
+          <input type="hidden" name="form-name" value="fall-cleanup-estimate" />
+          <input type="hidden" name="gclid" class="gclid" />
+          <p class="hp"><label>Leave blank <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <div class="field"><label for="f-name-2">Name</label><input id="f-name-2" name="name" type="text" autocomplete="name" required /></div>
+          <div class="field"><label for="f-phone-2">Phone</label><input id="f-phone-2" name="phone" type="tel" inputmode="tel" autocomplete="tel" required /></div>
+          <div class="field"><label for="f-det-2">Tell us about your yard <em>(optional)</em></label><textarea id="f-det-2" name="details" placeholder="e.g. front & back lawn leaves, 3 flower beds, some fallen branches"></textarea></div>
+          <button class="btn" type="submit">Get My Free Estimate</button>
+          <div class="microcopy">Free estimate • No obligation • Local Central PA crew</div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr">2026</span> Alejandro's Landscaping · New Cumberland, PA · <a href="tel:+17177366538">(717) 736-6538</a></div>
+</footer>
+
+<div class="sticky" id="sticky"><a class="btn" href="#estimate" data-event="cta_sticky">Get My Free Estimate</a></div>
+
+<script>
+(function(){
+  // Before/after slider
+  var ba=document.getElementById('ba'), r=ba.querySelector('input');
+  function set(v){ba.style.setProperty('--pos',v+'%');}
+  r.addEventListener('input',function(){set(r.value);});
+
+  // Sticky mobile CTA: show after hero, hide when form is visible
+  var st=document.getElementById('sticky'), hero=document.getElementById('top'), forms=document.querySelectorAll('.final'),vis=new Set();
+  var pastHero=false, formIn=false;
+  function upd(){st.classList.toggle('show',pastHero&&!formIn);}
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){pastHero=!e[0].isIntersecting;upd();}).observe(hero);
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?vis.add(e.target):vis.delete(e.target);});formIn=vis.size>0;upd();});forms.forEach(function(f){io.observe(f);});
+  }
+
+  // Capture gclid for offline conversion matching
+  try{
+    var p=new URLSearchParams(location.search), g=p.get('gclid');
+    if(g){sessionStorage.setItem('gclid',g);}
+    var gv=g||sessionStorage.getItem('gclid')||'';document.querySelectorAll('.gclid').forEach(function(i){i.value=gv;});
+  }catch(e){}
+
+  // Analytics events (dataLayer / gtag if present)
+  function ev(name){window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:name});}
+  document.addEventListener('click',function(e){var t=e.target.closest('[data-event]');if(t)ev(t.dataset.event);});
+  document.querySelectorAll('.leadForm').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();ev('fall_cleanup_lead_submit');var c=f.closest('.form-card');c.innerHTML='<h2>Got It — Your Estimate Request Is In</h2><p class="lede">Preview only: on the live site this sends the lead and goes to the thank-you page.</p>';c.scrollIntoView({block:'center'});});});
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+
+</body></html>
