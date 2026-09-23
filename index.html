@@ -34,9 +34,9 @@ p{margin:0 0 1em}
 .hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
 .hdr img{height:60px;width:auto}
 @media (max-width:480px){.hdr .wrap{height:72px}.hdr img{height:50px}}
-.hdr a.tel{display:inline-flex;align-items:center;gap:8px;color:var(--forest);font-weight:800;text-decoration:none;font-size:17px}
-.hdr a.tel svg{width:18px;height:18px}
-@media (max-width:480px){.hdr a.tel{background:var(--forest);color:#fff;padding:9px 13px;border-radius:999px;font-size:15px;gap:6px;white-space:nowrap}.hdr a.tel svg{width:16px;height:16px}.hdr img{height:44px}}
+.hdr a.tel{display:inline-flex;align-items:center;gap:8px;background:var(--forest);color:#fff;font-weight:800;text-decoration:none;font-size:17px;padding:11px 18px;border-radius:999px;white-space:nowrap}
+.hdr a.tel svg{width:18px;height:18px;color:#fff}
+@media (max-width:480px){.hdr a.tel{padding:9px 13px;border-radius:999px;font-size:15px;gap:6px}.hdr a.tel svg{width:16px;height:16px}.hdr img{height:44px}}
 
 /* Hero */
 .hero{background:var(--cream)}
@@ -45,7 +45,7 @@ p{margin:0 0 1em}
 .hero .sub{font-size:clamp(18px,2vw,21px);color:#394239;max-width:520px;margin-bottom:28px}
 .hero .rating{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:22px;font-weight:700;font-size:15px;color:var(--ink)}
 @media (max-width:480px){.hero .dot{display:none}.hero .rating{gap:4px 8px}}
-.proof{margin-top:18px;display:flex;flex-direction:column;gap:2px}
+.proof{margin-top:14px;display:flex;flex-direction:column;gap:2px}
 .proof .stars.big{font-size:24px;letter-spacing:3px;line-height:1.2}
 .proof-txt{font-weight:800;font-size:16px;color:var(--ink)}
 @media (max-width:860px){.proof{align-items:center;text-align:center}}
@@ -236,7 +236,7 @@ footer a{color:#fff}
       <div class="form-card">
         <h2>Get Your Free Fall Cleanup Estimate</h2>
         <p class="lede">Takes 30 seconds. We'll reach out to get you a price.</p>
-        <form name="fall-cleanup-estimate" class="leadForm">
+        <form name="fall-cleanup-estimate" class="leadForm" netlify data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="fall-cleanup-estimate" />
           <input type="hidden" name="gclid" class="gclid" />
           <p class="hp"><label>Leave blank <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
@@ -310,7 +310,7 @@ footer a{color:#fff}
       <div class="form-card">
         <h2>Get Your Free Fall Cleanup Estimate</h2>
         <p class="lede">Takes 30 seconds. We'll reach out to get you a price.</p>
-        <form name="fall-cleanup-estimate" class="leadForm">
+        <form name="fall-cleanup-estimate" class="leadForm" netlify data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="fall-cleanup-estimate" />
           <input type="hidden" name="gclid" class="gclid" />
           <p class="hp"><label>Leave blank <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
