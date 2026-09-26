@@ -238,7 +238,7 @@ footer a{color:#fff}
       <div class="form-card">
         <h2>Get Your Free Fall Cleanup Estimate</h2>
         <p class="lede">Takes 30 seconds. We'll reach out to get you a price.</p>
-        <form name="fall-cleanup-estimate" class="leadForm" netlify data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <form name="fall-cleanup-estimate" class="leadForm" netlify data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="fall-cleanup-estimate" />
           <input type="hidden" name="gclid" class="gclid" />
           <p class="hp"><label>Leave blank <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
@@ -312,7 +312,7 @@ footer a{color:#fff}
       <div class="form-card">
         <h2>Get Your Free Fall Cleanup Estimate</h2>
         <p class="lede">Takes 30 seconds. We'll reach out to get you a price.</p>
-        <form name="fall-cleanup-estimate" class="leadForm" netlify data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <form name="fall-cleanup-estimate" class="leadForm" netlify data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="fall-cleanup-estimate" />
           <input type="hidden" name="gclid" class="gclid" />
           <p class="hp"><label>Leave blank <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
@@ -359,7 +359,7 @@ footer a{color:#fff}
   // Analytics events (dataLayer / gtag if present)
   function ev(name){window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:name});}
   document.addEventListener('click',function(e){var t=e.target.closest('[data-event]');if(t)ev(t.dataset.event);});
-  document.querySelectorAll('.leadForm').forEach(function(f){f.addEventListener('submit',function(){ev('fall_cleanup_lead_submit');});});
+  document.querySelectorAll('.leadForm').forEach(function(f){f.addEventListener('submit',function(){ev('lead_mini_submit');});});
 
   document.getElementById('yr').textContent=new Date().getFullYear();
 })();
